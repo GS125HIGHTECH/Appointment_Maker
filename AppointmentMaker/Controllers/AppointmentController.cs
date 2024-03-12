@@ -18,7 +18,10 @@ namespace AppointmentMaker.Controllers
 
         public IActionResult Details(AppointmentModel appointment) 
         {
-            appointments.Add(appointment);
+            if(!(appointment == null)) 
+            {
+                appointments.Add(appointment);
+            }
             return View(appointment);
         }
     }
